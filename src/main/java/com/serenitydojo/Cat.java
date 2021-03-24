@@ -1,13 +1,13 @@
 package com.serenitydojo;
 
 public class Cat {
-    private String name;
-    private String favoriteFood;
     private int age;
+    private String name;
+    private String favouriteFood;
 
-    public Cat(String name, String favoriteFood, int age) {
+    public Cat(String name, String favouriteFood, int age) {
         this.name = name;
-        this.favoriteFood = favoriteFood;
+        this.favouriteFood = favouriteFood;
         this.age = age;
     }
 
@@ -15,15 +15,11 @@ public class Cat {
         return name;
     }
 
-    public void setFavoriteFood(String favoriteFood) {
-        this.favoriteFood = favoriteFood;
+    public String getFavouriteFood() {
+        return favouriteFood;
     }
 
-    public String getFavoriteFood() {
-        return favoriteFood;
-    }
-
-    public int getAge() {
+    public int getAge(){
         return age;
     }
 }
