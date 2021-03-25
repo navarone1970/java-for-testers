@@ -60,4 +60,10 @@ public class Cat extends Pet {
     private void lickPaws() {
         System.out.println(getName() + " licks his paws");
     }
+
+    @Override
+    public String play(){
+        return "plays with string";
+    }
+
 }
