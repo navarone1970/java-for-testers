@@ -1,6 +1,6 @@
 package com.serenitydojo;
 
-public class Pet {
+public abstract class Pet {
     private String name;
 
     public Pet(String name) {
@@ -11,9 +11,7 @@ public class Pet {
         return name;
     }
 
-    public String makeNoise() {
-        return "Unknown Noise";
-    }
+    public abstract String  makeNoise();
 
     public String goForWalk(){
         return "walk walk walk";

@@ -23,7 +23,7 @@ public class WhenCreatingObjects {
         Assert.assertEquals(felix.getFavouriteFood(),"Tuna");
         Assert.assertEquals(felix.getAge(),4);
 
-        Pet hamster = new Pet("Rusty");
+        Pet hamster = new Hamster("Rusty","Wheel",1);
 
     }
 
@@ -68,10 +68,10 @@ public class WhenCreatingObjects {
     public void pets_make_noise(){
         Pet felix = new Cat("Felix", 2);
         Pet fido = new Dog("Fido", "Bone",6);
-        Pet furball = new Hamster("Furbll","Wheel",1);
+        Pet furball = new Hamster("Furball","Wheel",1);
 
         System.out.println("Felix goes " + felix.makeNoise());
-        System.out.println("Felix goes " + felix.goForWalk());
+        System.out.println("Fido goes " + fido.makeNoise());
         System.out.println("Furball goes " + furball.makeNoise());
 
 
