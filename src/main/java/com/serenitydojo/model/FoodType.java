@@ -1,5 +1,5 @@
 package com.serenitydojo.model;
 
 public enum FoodType {
-    TUNA, SALMON, DOGFOOD, PREMIUMDOGFOOD, CABBAGE, LETTUCE, UNKNOWN
+    TUNA, SALMON, DOG_FOOD, PREMIUM_DOG_FOOD, CABBAGE, LETTUCE, UNKNOWN
 }

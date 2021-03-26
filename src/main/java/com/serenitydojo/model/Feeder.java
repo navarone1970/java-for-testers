@@ -10,7 +10,7 @@ public class Feeder {
             case CAT:
                 return (isPremium) ? SALMON : TUNA;
             case DOG:
-                return (isPremium) ? PREMIUMDOGFOOD : DOGFOOD;
+                return (isPremium) ? PREMIUM_DOG_FOOD : DOG_FOOD;
             case HAMSTER:
                 return (isPremium) ? LETTUCE : CABBAGE;
             default:
