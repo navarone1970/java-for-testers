@@ -18,6 +18,7 @@ public class Dog extends Pet {
         return age;
     }
 
+    @Override
     public String makeNoise() {
         return "Woof";
     }
