@@ -17,7 +17,9 @@ public class WhenWritingReadableAssertions {
         int c = 20;
         int sum = a + b + c;
 
+
         // Check that the sum is 35
+        assertThat(sum).isEqualTo(35);
     }
 
     @Test
@@ -28,6 +30,7 @@ public class WhenWritingReadableAssertions {
         int sum = a + b + c;
 
         // Check that the sum is greater than 30
+        assertThat(sum).isGreaterThan(30);
     }
 
     @Test
@@ -37,6 +40,7 @@ public class WhenWritingReadableAssertions {
         int sum = a + b;
 
         // Check that the sum is between 10 and 20
+        assertThat(sum).isBetween(10,20);
     }
 
     @Test
@@ -44,6 +48,7 @@ public class WhenWritingReadableAssertions {
         double roughlyOneHundred = 99;
 
         // Check that the sum is within 10% of 100
+        assertThat(roughlyOneHundred).isCloseTo(100,Percentage.withPercentage(10));
     }
 
     @Test
@@ -51,6 +56,7 @@ public class WhenWritingReadableAssertions {
         String color = "red";
 
         // Check that the string has a value of 'red'
+        assertThat(color).isEqualTo("red");
     }
 
     @Test
@@ -58,6 +64,7 @@ public class WhenWritingReadableAssertions {
         String color = "RED";
 
         // Check that the string has a value of 'red' (ignoring case)
+        assertThat(color).isEqualToIgnoringCase("red");
     }
 
     @Test
@@ -65,6 +72,7 @@ public class WhenWritingReadableAssertions {
         String licenseNumber = "12345";
 
         // Check that the value contains only digits
+        assertThat(licenseNumber).containsOnlyDigits();
     }
 
     @Test
@@ -72,6 +80,7 @@ public class WhenWritingReadableAssertions {
         String colors = "red,green,blue";
 
         // Check that the value starts with 'red'
+        assertThat(colors).startsWith("red");
     }
 
     @Test
@@ -79,6 +88,7 @@ public class WhenWritingReadableAssertions {
         String colors = "red,green,blue";
 
         // Check that the value ends with 'blue'
+        assertThat(colors).endsWith("blue");
     }
 
 
@@ -87,6 +97,7 @@ public class WhenWritingReadableAssertions {
         List<String> colors = Arrays.asList("red","green","blue");
 
         // Check that the list contains "red"
+        assertThat(colors).contains("red", "blue");
     }
 
     @Test
@@ -94,6 +105,7 @@ public class WhenWritingReadableAssertions {
         List<String> colors = Arrays.asList("red","green","blue");
 
         // Check that the list contains "red" and "blue
+        assertThat(colors).contains("red","blue");
     }
 
     @Test
@@ -101,6 +113,7 @@ public class WhenWritingReadableAssertions {
         List<String> colors = Arrays.asList("red","green","blue");
 
         // Check that the list contains 3 elements
+        assertThat(colors).hasSize(3);
     }
 
     @Test
@@ -108,6 +121,7 @@ public class WhenWritingReadableAssertions {
         List<String> colors = Arrays.asList("red","green","blue");
 
         // Check that the list contains "red","green" and "blue" in any order
+        assertThat(colors).contains("green","blue","red");
     }
 
     @Test
@@ -115,6 +129,7 @@ public class WhenWritingReadableAssertions {
         List<String> colors = Arrays.asList("red","green","blue");
 
         // Check that the list contains "red","blue" and "green" in any order
+        assertThat(colors).containsExactlyInAnyOrder("blue","red","green");
     }
 
 
