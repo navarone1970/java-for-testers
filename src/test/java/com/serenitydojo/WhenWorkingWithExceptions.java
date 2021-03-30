@@ -38,11 +38,11 @@ public class WhenWorkingWithExceptions {
     @Test(expected = FileHasNoWordException.class)
     public void shouldReportAnErrorIfTheFileDoesNotExist() throws Exception{
         int numberOfWords = wordCounter.numberOfWordsInFile("file-that-does-not-exist");
-        assertThat(numberOfWords).isEqualTo(0);
+//        assertThat(numberOfWords).isEqualTo(0);
     }
 
     @Test(expected = FileHasNoWordException.class)
-    public void shouldThrowMeaningfulExceptionIfThereAreNoWordsInTheFile() throws FileHasNoWordException {
+    public void shouldThrowMeaningfulExceptionIfThereAreNoWordsInTheFile() throws Exception {
         wordCounter.numberOfWordsInFile("src/main/resources/no_words.txt");
     }
 

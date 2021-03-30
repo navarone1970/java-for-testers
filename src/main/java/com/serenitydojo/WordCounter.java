@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 public class WordCounter {
     public int numberOfWordsIn(String value){
-        if ( value == null ){
+        if ( value == null  || value.equals("")){
             return 0;
         } else {
             return value.split("\\W").length;
@@ -28,6 +28,8 @@ public class WordCounter {
             return wordCount;
         } catch (NoSuchFileException noSuchFile){
             throw new FileHasNoWordException("No words found in the non-existent file "+filename);
+        } finally {
+            System.out.println("Processed file "+filename);
         }
     }
 }
