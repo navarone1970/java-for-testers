@@ -1,6 +1,8 @@
 package com.serenitydojo.fruitmarket;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Catalog {
@@ -12,7 +14,15 @@ public class Catalog {
     }
 
     public Double getPriceOf(Fruit fruit) {
-        return pricePerKilo.get(fruit);
+        try {
+            if (pricePerKilo.containsKey(fruit)) {
+                return pricePerKilo.get(fruit);
+            } else {
+                throw new FruitUnavailableException("Fruit unavailable.");
+            }
+        } catch (Exception exception){
+            throw new FruitUnavailableException("Fruit unavailable.");
+        }
     }
 
     public static class PriceSetter {
@@ -28,5 +38,14 @@ public class Catalog {
             catalog.pricePerKilo.put(fruit, price);
             return catalog;
         }
+    }
+
+    public List<String> listAvailableFruit(){
+        List<String> listOfFruit = new ArrayList<>();
+        for(Map.Entry<Fruit,Double> entry : pricePerKilo.entrySet()) {
+            listOfFruit.add(entry.getKey().toString());
+        }
+        listOfFruit.sort(String.CASE_INSENSITIVE_ORDER);
+        return listOfFruit;
     }
 }

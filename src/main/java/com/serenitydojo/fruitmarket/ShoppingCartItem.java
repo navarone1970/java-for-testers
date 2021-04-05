@@ -4,6 +4,7 @@ public class ShoppingCartItem {
     private Fruit fruit;
     private Double quantity;
     private Double totalCost;
+    private static Double VOLUME_DISCOUNT = 0.1;
 
     public ShoppingCartItem(Fruit fruit, Double quantity, Double totalCost) {
         this.fruit = fruit;
@@ -20,6 +21,7 @@ public class ShoppingCartItem {
     }
 
     public Double getTotalCost() {
-        return totalCost;
+
+        return quantity > 5.00 ? totalCost * (1 - VOLUME_DISCOUNT) : totalCost;
     }
 }
